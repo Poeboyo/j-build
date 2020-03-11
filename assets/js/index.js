@@ -1,18 +1,8 @@
-$("#battlepage").addClass("hide");
-$("#toBattleButton").on("click", function() {
-  $("#battlepage").removeClass("hide");
-  $("#homepage").addClass("hide");
-});
-
-$("#back-button").on("click", function() {
-  $("#homepage").removeClass("hide");
-  $("#battlepage").addClass("hide");
-});
-
 document.addEventListener("DOMContentLoaded", function() {
   var elems = document.querySelectorAll(".carousel");
   M.Carousel.init(elems, {});
 });
+
 let playerOne;
 let playerTwo;
 
@@ -134,289 +124,140 @@ let waluigi = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".carousel");
-});
+function setPlayerOne() {
+  $("#firstChoice").text("Choose: " + playerOne.name);
+  $("#statsOne").text(
+    "ATK: " +
+      playerOne.stats.attack +
+      " " +
+      "DEF: " +
+      playerOne.stats.defense +
+      " " +
+      "SPD: " +
+      playerOne.stats.speed
+  );
+  if (playerOne && playerTwo) {
+    $("#battleButton").removeClass("disabled");
+  }
+}
+
+function setPlayerTwo() {
+  $("#secondChoice").text("Choose: " + playerTwo.name);
+  $("#statsTwo").text(
+    "ATK: " +
+      playerTwo.stats.attack +
+      " " +
+      "DEF: " +
+      playerTwo.stats.defense +
+      " " +
+      "SPD: " +
+      playerTwo.stats.speed
+  );
+  if (playerOne && playerTwo) {
+    $("#battleButton").removeClass("disabled");
+  }
+}
 
 $("#odimmOne").on("click", function() {
   playerOne = odimm;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#endeavorOne").on("click", function() {
   playerOne = endeavor;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#dekuOne").on("click", function() {
   playerOne = deku;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#trissOne").on("click", function() {
   playerOne = triss;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#allForOneOne").on("click", function() {
   playerOne = allForOne;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#allmightOne").on("click", function() {
   playerOne = allMight;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#linkOne").on("click", function() {
   playerOne = link;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#gokuOne").on("click", function() {
   playerOne = goku;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#waluigiOne").on("click", function() {
   playerOne = waluigi;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#inteleonOne").on("click", function() {
   playerOne = inteleon;
-  $("#firstChoice").text("Choose: " + playerOne.name);
-  $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
 $("#odimmTwo").on("click", function() {
   playerTwo = odimm;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerOne();
+  imgSwap(playerOne, playerTwo);
 });
+
 $("#endeavorTwo").on("click", function() {
   playerTwo = endeavor;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerTwo();
+  imgSwap(playerOne, playerTwo);
 });
 $("#dekuTwo").on("click", function() {
   playerTwo = deku;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerTwo();
+  imgSwap(playerOne, playerTwo);
 });
 $("#trissTwo").on("click", function() {
   playerTwo = triss;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerTwo();
+  imgSwap(playerOne, playerTwo);
 });
 $("#allForOneTwo").on("click", function() {
   playerTwo = allForOne;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerTwo();
+  imgSwap(playerOne, playerTwo);
 });
 $("#allmightTwo").on("click", function() {
   playerTwo = allMight;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerTwo();
+  imgSwap(playerOne, playerTwo);
 });
 $("#linkTwo").on("click", function() {
   playerTwo = link;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerTwo();
+  imgSwap(playerOne, playerTwo);
 });
 $("#gokuTwo").on("click", function() {
   playerTwo = goku;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerTwo();
+  imgSwap(playerOne, playerTwo);
 });
 $("#waluigiTwo").on("click", function() {
   playerTwo = waluigi;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerTwo();
+  imgSwap(playerOne, playerTwo);
 });
 $("#inteleonTwo").on("click", function() {
   playerTwo = inteleon;
-  $("#secondChoice").text("Choose: " + playerTwo.name);
-  $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
-  );
+  setPlayerTwo();
+  imgSwap(playerOne, playerTwo);
 });
 
 //Allows User to Make a Selection
@@ -822,18 +663,7 @@ function battle(playerOne, playerTwo) {
   disableTwo();
 }
 
-if (playerOne && playerTwo !== undefined) {
-  $("#battleButton").removeClass("disabled");
-}
-
 function imgSwap(playerOne, playerTwo) {
   $("#playerOne").attr("src", playerOne.img);
   $("#playerTwo").attr("src", playerTwo.img);
 }
-
-$("#battleButton").on("click", function() {
-  $("#battleArea").removeClass("hide");
-  imgSwap(playerOne, playerTwo);
-  battle(playerOne, playerTwo);
-  $("#battleButton").addClass("disabled");
-});
