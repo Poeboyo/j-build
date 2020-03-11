@@ -9,7 +9,7 @@ body {
 
 #characterSelectScreen {
   margin-top: 1%;
-  z-index: -1;
+  z-index: 0;
 }
 #lightningLeft {
   width: 40%;
@@ -31,7 +31,7 @@ body {
 }
 
 #logo {
-  z-index: -1;
+  z-index: -4;
   margin-top: 16.5%;
   width: 45%;
   height: 35%;
@@ -47,22 +47,22 @@ body {
 
 #battleLogo {
   z-index: -11;
-  margin-left: 31%;
-  margin-top: -5%;
+  margin-left: 24%;
+  margin-top: -2%;
   position: absolute;
 }
 #pulseBattle {
   z-index: -10;
   position: absolute;
-  margin-left: 29%;
+  margin-left: 22%;
   width: 45%;
-  margin-top: -14%;
+  margin-top: -16%;
 }
 #separator {
-  z-index: -9;
+  z-index: -12;
   position: absolute;
   transform: rotate(90deg);
-  margin-left: 23%;
+  margin-left: 15%;
   margin-top: -1%;
   height: 90%;
 }
@@ -189,12 +189,10 @@ body {
   margin-top: 0%;
 }
 
-#carouselOne {
-  width: 150%;
-  height: 50%;
+#battleContainer {
+  z-index: -12;
 }
-
-#carouselTwo {
-  width: 150%;
-  height: 50%;
+.carousel-item {
+  height: 100%;
+  width: 100%;
 }
