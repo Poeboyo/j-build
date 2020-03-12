@@ -445,7 +445,9 @@ function battle(playerOne, playerTwo) {
     } else {
       playerTwo.stats.health = health - damage;
       $(id2).attr("value", playerTwo.stats.health);
-      $("#battleLog").append(`Counter Unsuccessful from ${playerTwo.name}!`);
+      $("#battleLog").append(
+        `<p>Counter Unsuccessful from ${playerTwo.name}!</p>`
+      );
     }
 
     if (playerTwo.stats.health <= 0) {
