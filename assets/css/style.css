@@ -186,7 +186,12 @@ body {
 #battleLog {
   position: absolute;
   margin-left: 38%;
-  margin-top: 0%;
+  margin-top: 2%;
+  color: #ffffff;
+  overflow-y: auto;
+  height: 40%;
+  width: 25%;
+  text-align: center;
 }
 
 #battleContainer {
