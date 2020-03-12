@@ -334,7 +334,6 @@ function battle(playerOne, playerTwo) {
     } else {
       $("#battleLog").append(`<p>${attackerName} Missed!</p>`);
       $(id).attr("value", playerTwo.stats.health);
-      $("#battleLog").append(`<p>${attackerName} missed ${victimName}!</p>`);
     }
     $(id).attr("value", playerTwo.stats.health);
 
@@ -343,6 +342,7 @@ function battle(playerOne, playerTwo) {
         `<p>${victimName} Has Feinted From Their Wounds!</p>`
       );
       playerTwo.stats.health = 0;
+      knockout();
     }
   }
 
@@ -371,6 +371,7 @@ function battle(playerOne, playerTwo) {
         `<p>${victimName} Has Feinted From Their Wounds!</p>`
       );
       playerTwo.stats.health = 0;
+      knockout();
     }
   }
 
@@ -391,6 +392,7 @@ function battle(playerOne, playerTwo) {
         `<p>${victimName} Has Feinted From Their Wounds!</p>`
       );
       playerTwo.stats.health = 0;
+      knockout();
     }
 
     $("#battleLog").append(
@@ -419,6 +421,7 @@ function battle(playerOne, playerTwo) {
         `<p>${victimName} Has Feinted From Their Wounds!</p>`
       );
       playerTwo.stats.health = 0;
+      knockout();
     }
 
     $(id).attr("value", playerTwo.stats.health);
@@ -455,6 +458,8 @@ function battle(playerOne, playerTwo) {
         `<p>${victimName} Has Feinted From Their Wounds!</p>`
       );
       playerTwo.stats.health = 0;
+      knockout();
+
       $(id2).attr("value", playerTwo.stats.health);
     } else if (playerOne.stats.health <= 0) {
       $("#battleLog").append(
@@ -462,6 +467,7 @@ function battle(playerOne, playerTwo) {
       );
       playerOne.stats.health = 0;
       $(id).attr("value", playerOne.stats.health);
+      knockout();
     }
   }
 
@@ -496,12 +502,16 @@ function battle(playerOne, playerTwo) {
         `<p>${victimName} Has Feinted From Their Wounds!</p>`
       );
       playerTwo.stats.health = 0;
+      knockout();
+
       $(id2).attr("value", playerTwo.stats.health);
     } else if (playerOne.stats.health <= 0) {
       $("#battleLog").append(
         `<p>${attackerName} Has Feinted From Their Wounds!</p>`
       );
       playerOne.stats.health = 0;
+      knockout();
+
       $(id).attr("value", playerOne.stats.health);
     }
   }
@@ -539,16 +549,18 @@ function battle(playerOne, playerTwo) {
     playerOne.stats.health = health2 - damage2;
 
     if (playerTwo.stats.health <= 0) {
-      $("#battleLog").append(`<p>${p1} Has Feinted From Their Wounds!</p>`);
+      $("#battleLog").append(`<p>${p2} Has Feinted From Their Wounds!</p>`);
       playerOne.stats.health = 0;
-      $(id).attr("value", playerTwo.stats.health);
+      $(id2).attr("value", playerTwo.stats.health);
+      knockout();
     } else if (playerOne.stats.health <= 0) {
       playerTwo.stats.health = 0;
-      $("#battleLog").append(`<p>${p2} Has Feinted From Their Wounds!</p>`);
-      $(id2).attr("value", playerOne.stats.health);
+      $("#battleLog").append(`<p>${p1} Has Feinted From Their Wounds!</p>`);
+      $(id).attr("value", playerOne.stats.health);
+      knockout();
     }
-    $(id).attr("value", playerTwo.stats.health);
-    $(id2).attr("value", playerOne.stats.health);
+    $(id2).attr("value", playerTwo.stats.health);
+    $(id).attr("value", playerOne.stats.health);
     $("#battleLog").append(`<p>${p1} and ${p2} Traded Blows!</p>`);
   }
 
@@ -628,43 +640,44 @@ function battle(playerOne, playerTwo) {
     }
   }
 
-  //Disables Player Twos Buttons
-  function disableTwo() {
-    $("#attackTwo").prop("disabled", true);
-    $("#strAttackTwo").prop("disabled", true);
-    $("#defendTwo").prop("disabled", true);
-    $("#counterTwo").prop("disabled", true);
-  }
-
-  //Disables Player Ones Buttons
-  function disableOne() {
-    $("#attackOne").prop("disabled", true);
-    $("#strAttackOne").prop("disabled", true);
-    $("#defendOne").prop("disabled", true);
-    $("#counterOne").prop("disabled", true);
-  }
-
-  //Enables Player One Buttons
-  function enableOne() {
-    $("#attackOne").prop("disabled", false);
-    $("#strAttackOne").prop("disabled", false);
-    $("#defendOne").prop("disabled", false);
-    $("#counterOne").prop("disabled", false);
-
-    //Stores Player One's Action
-    actionOne = "";
-    //Stores Player Two's Action
-    actionTwo = "";
-  }
-
-  //Enables Player Two Buttons
-  function enableTwo() {
-    $("#attackTwo").prop("disabled", false);
-    $("#strAttackTwo").prop("disabled", false);
-    $("#defendTwo").prop("disabled", false);
-    $("#counterTwo").prop("disabled", false);
-  }
   disableTwo();
+}
+
+//Disables Player Twos Buttons
+function disableTwo() {
+  $("#attackTwo").prop("disabled", true);
+  $("#strAttackTwo").prop("disabled", true);
+  $("#defendTwo").prop("disabled", true);
+  $("#counterTwo").prop("disabled", true);
+}
+
+//Disables Player Ones Buttons
+function disableOne() {
+  $("#attackOne").prop("disabled", true);
+  $("#strAttackOne").prop("disabled", true);
+  $("#defendOne").prop("disabled", true);
+  $("#counterOne").prop("disabled", true);
+}
+
+//Enables Player One Buttons
+function enableOne() {
+  $("#attackOne").prop("disabled", false);
+  $("#strAttackOne").prop("disabled", false);
+  $("#defendOne").prop("disabled", false);
+  $("#counterOne").prop("disabled", false);
+
+  //Stores Player One's Action
+  actionOne = "";
+  //Stores Player Two's Action
+  actionTwo = "";
+}
+
+//Enables Player Two Buttons
+function enableTwo() {
+  $("#attackTwo").prop("disabled", false);
+  $("#strAttackTwo").prop("disabled", false);
+  $("#defendTwo").prop("disabled", false);
+  $("#counterTwo").prop("disabled", false);
 }
 
 function imgSwap(playerOne, playerTwo) {
@@ -672,13 +685,36 @@ function imgSwap(playerOne, playerTwo) {
   $("#playerTwo").attr("src", playerTwo.img);
 }
 
-function knockout(playerOne, playerTwo) {
-  if (playerOne.stats.health === 0) {
-  }
+function knockout() {
+  $("#game-end").removeClass("hide");
+  disableOne();
 }
 
 $("#battleButton").on("click", function() {
   $("#battleArea").removeClass("hide");
   battle(playerOne, playerTwo);
   $("#battleButton").addClass("disabled");
+});
+
+$("#rematch").on("click", function() {
+  playerOne.stats.health = 100;
+  playerTwo.stats.health = 100;
+  $("#healthTwo").attr("value", playerTwo.stats.health);
+  $("#healthOne").attr("value", playerOne.stats.health);
+  $("#battleLog").empty();
+  $("#battleLog").append("<h3>BATTLE LOG</h3>");
+  $("#game-end").addClass("hide");
+  enableOne();
+});
+
+$("#reselect").on("click", function() {
+  playerOne.stats.health = 100;
+  playerTwo.stats.health = 100;
+  $("#healthTwo").attr("value", playerTwo.stats.health);
+  $("#healthOne").attr("value", playerOne.stats.health);
+  $("#battleLog").empty();
+  $("#battleLog").append("<h3>BATTLE LOG</h3>");
+  $("#game-end").addClass("hide");
+  $("#battleArea").addClass("hide");
+  enableOne();
 });

@@ -201,3 +201,9 @@ body {
   height: 100%;
   width: 100%;
 }
+#game-end {
+  margin-left: 37%;
+  z-index: 10;
+  position: absolute;
+  margin-top: 14%;
+}
