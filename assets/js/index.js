@@ -719,19 +719,17 @@ $("#reselect").on("click", function() {
   enableOne();
 });
 
-//Animation Functions For Case One
-//animateAttackOne
-//animateCounterOne
-//animateDefendOne
-//animateStrongOne
-//animateStrongCounterOne
-
-//Animation Functions For Case Two
-//animateAttackTwo
-//animateCounterTwo
-//animateDefendTwo
-//animateStrongTwo
-//AnimateStrongCounterTwo
+// Animation Functions
+// showAnimation("#animateAttackOne", 1000);
+// showAnimation("#animateAttackTwo", 1000);
+// showAnimation("#animateCounterOne", 1500);
+// showAnimation("#animateCounterTwo", 1500);
+// showAnimation("#animateDefendOne", 1500);
+// showAnimation("#animateDefendTwo", 1500);
+// showAnimation("#animateStrongOne", 1500);
+// showAnimation("#animateStrongTwo", 1500);
+// showAnimation("#animateStrongCounterOne", 1500);
+// showAnimation("#animateStrongCounterOne", 1500);
 
 function showAnimation(id, time) {
   $(id).removeClass("hide");

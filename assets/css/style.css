@@ -221,6 +221,7 @@ body {
   width: 100%;
 }
 
+/* Player One Animations  */
 #animateAttackOne {
   /* perfect */
   position: absolute;
@@ -251,4 +252,36 @@ body {
   position: absolute;
   margin-top: 8%;
   margin-left: 5%;
+}
+
+/* Player Two Animations  */
+#animateAttackTwo {
+  /* perfect */
+  position: absolute;
+  margin-top: 7%;
+  margin-left: 59%;
+}
+#animateCounterTwo {
+  /* perfect */
+  position: absolute;
+  margin-top: 12%;
+  margin-left: 65%;
+}
+#animateDefendTwo {
+  /* perfect */
+  position: absolute;
+  margin-top: 13%;
+  height: 45%;
+  margin-left: 63%;
+}
+#animateStrongTwo {
+  position: absolute;
+  margin-top: 11%;
+  margin-left: 58%;
+}
+#animateStrongCounterTwo {
+  /* perfect */
+  position: absolute;
+  margin-top: 8%;
+  margin-left: 57%;
 }
