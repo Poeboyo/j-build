@@ -265,7 +265,6 @@ function battle(playerOne, playerTwo) {
   //Applies "Attack" to Player One's Action
   $("#attackOne").on("click", function() {
     actionOne = "attack";
-    // attackPlayer(playerOne, playerTwo, "#healthTwo");
     disableOne();
     enableTwo();
   });
@@ -330,14 +329,14 @@ function battle(playerOne, playerTwo) {
 
     if (randomNum >= 35) {
       playerTwo.stats.health = playerTwo.stats.health - damage;
-      $(id).text(`${playerTwo.stats.health}/100`);
+      $(id).attr("value", playerTwo.stats.health);
       $("#battleLog").append(`<p> ${attackerName} smashed ${victimName}!</p>`);
     } else {
       $("#battleLog").append(`<p>${attackerName} Missed!</p>`);
-      $(id).text(`${playerTwo.stats.health}/100`);
+      $(id).attr("value", playerTwo.stats.health);
       $("#battleLog").append(`<p>${attackerName} missed ${victimName}!</p>`);
     }
-    $(id).text(`${playerTwo.stats.health}/100`);
+    $(id).attr("value", playerTwo.stats.health);
 
     if (playerTwo.stats.health <= 0) {
       $("#battleLog").append(
@@ -359,13 +358,13 @@ function battle(playerOne, playerTwo) {
 
     if (randomNum >= 35) {
       playerTwo.stats.health = health - damage;
-      $(id).text(`${playerTwo.stats.health}/100`);
+      $(id).attr("value", playerTwo.stats.health);
       $("#battleLog").append(
         `<p>${attackerName} Smashed through ${victimName}'s Defenses!</p>`
       );
     } else {
       $("#battleLog").append(`<p>${attackerName} Missed!</p>`);
-      $(id).text(`${playerTwo.stats.health}/100`);
+      $(id).attr("value", playerTwo.stats.health);
     }
     if (playerTwo.stats.health <= 0) {
       $("#battleLog").append(
@@ -397,7 +396,7 @@ function battle(playerOne, playerTwo) {
     $("#battleLog").append(
       `<p>${attackerName} Threw Strikes at ${victimName}!</p>`
     );
-    $(id).text(`${playerTwo.stats.health}/100`);
+    $(id).attr("value", playerTwo.stats.health);
   }
 
   //Function for a Player to Dampen the Blow of a Regular or Strong Attack
@@ -422,7 +421,7 @@ function battle(playerOne, playerTwo) {
       playerTwo.stats.health = 0;
     }
 
-    $(id).text(`${playerTwo.stats.health}/100`);
+    $(id).attr("value", playerTwo.stats.health);
   }
   //Yeet the Skeet ...... ya..... and i cannot stress this enough..... YEET
   function counter(playerOne, playerTwo, id, id2) {
@@ -437,13 +436,15 @@ function battle(playerOne, playerTwo) {
 
     if (randomNum >= 30) {
       playerOne.stats.health = playerOne.stats.health - damage;
-      $(id).text(`${playerOne.stats.health}/100`);
+
+      $(id).attr("value", playerOne.stats.health);
+
       $("#battleLog").append(
         `<p>Counter Successful from ${playerTwo.name}! They now suffer an injury</p>`
       );
     } else {
       playerTwo.stats.health = health - damage;
-      $(id2).text(`${playerTwo.stats.health}/100`);
+      $(id2).attr("value", playerTwo.stats.health);
       $("#battleLog").append(`Counter Unsuccessful from ${playerTwo.name}!`);
     }
 
@@ -452,13 +453,13 @@ function battle(playerOne, playerTwo) {
         `<p>${victimName} Has Feinted From Their Wounds!</p>`
       );
       playerTwo.stats.health = 0;
-      $(id2).text(`${playerTwo.stats.health}/100`);
+      $(id2).attr("value", playerTwo.stats.health);
     } else if (playerOne.stats.health <= 0) {
       $("#battleLog").append(
         `<p>${attackerName} Has Feinted From Their Wounds!</p>`
       );
       playerOne.stats.health = 0;
-      $(id).text(`${playerOne.stats.health}/100`);
+      $(id).attr("value", playerOne.stats.health);
     }
   }
 
@@ -475,13 +476,14 @@ function battle(playerOne, playerTwo) {
     let randomNum = Math.floor(1 + Math.random() * 50);
     if (randomNum >= 35) {
       playerOne.stats.health = health2 - damage;
-      $(id).text(`${playerOne.stats.health}/100`);
+      $(id).attr("value", playerOne.stats.health);
+
       $("#battleLog").append(
         `<p>${playerTwo.name} Returned The Strong Attack To Sender!</p>`
       );
     } else {
       playerTwo.stats.health = health - damage;
-      $(id2).text(`${playerTwo.stats.health}/100`);
+      $(id2).attr("value", playerTwo.stats.health);
       $("#battleLog").append(
         `<p>Counter Unsuccessful from ${playerTwo.name}! They were smashed!</p>`
       );
@@ -492,13 +494,13 @@ function battle(playerOne, playerTwo) {
         `<p>${victimName} Has Feinted From Their Wounds!</p>`
       );
       playerTwo.stats.health = 0;
-      $(id2).text(`${playerTwo.stats.health}/100`);
+      $(id2).attr("value", playerTwo.stats.health);
     } else if (playerOne.stats.health <= 0) {
       $("#battleLog").append(
         `<p>${attackerName} Has Feinted From Their Wounds!</p>`
       );
       playerOne.stats.health = 0;
-      $(id).text(`${playerOne.stats.health}/100`);
+      $(id).attr("value", playerOne.stats.health);
     }
   }
 
@@ -537,14 +539,14 @@ function battle(playerOne, playerTwo) {
     if (playerTwo.stats.health <= 0) {
       $("#battleLog").append(`<p>${p1} Has Feinted From Their Wounds!</p>`);
       playerOne.stats.health = 0;
-      $(id).text(`${playerTwo.stats.health}/100`);
+      $(id).attr("value", playerTwo.stats.health);
     } else if (playerOne.stats.health <= 0) {
       playerTwo.stats.health = 0;
       $("#battleLog").append(`<p>${p2} Has Feinted From Their Wounds!</p>`);
-      $(id2).text(`${playerOne.stats.health}/100`);
+      $(id2).attr("value", playerOne.stats.health);
     }
-    $(id).text(`${playerTwo.stats.health}/100`);
-    $(id2).text(`${playerOne.stats.health}/100`);
+    $(id).attr("value", playerTwo.stats.health);
+    $(id2).attr("value", playerOne.stats.health);
     $("#battleLog").append(`<p>${p1} and ${p2} Traded Blows!</p>`);
   }
 
@@ -667,3 +669,14 @@ function imgSwap(playerOne, playerTwo) {
   $("#playerOne").attr("src", playerOne.img);
   $("#playerTwo").attr("src", playerTwo.img);
 }
+
+function knockout(playerOne, playerTwo) {
+  if (playerOne.stats.health === 0) {
+  }
+}
+
+$("#battleButton").on("click", function() {
+  $("#battleArea").removeClass("hide");
+  battle(playerOne, playerTwo);
+  $("#battleButton").addClass("disabled");
+});
