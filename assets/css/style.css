@@ -227,12 +227,14 @@ body {
   position: absolute;
   margin-top: 7%;
   margin-left: 6%;
+  z-index: 9001;
 }
 #animateCounterOne {
   /* perfect */
   position: absolute;
   margin-top: 12%;
   margin-left: 12.5%;
+  z-index: 9002;
 }
 #animateDefendOne {
   /* perfect */
@@ -240,18 +242,21 @@ body {
   margin-top: 13%;
   height: 45%;
   margin-left: 10%;
+  z-index: 9003;
 }
 #animateStrongOne {
   /* perfect */
   position: absolute;
   margin-top: 11%;
   margin-left: 5%;
+  z-index: 9004;
 }
 #animateStrongCounterOne {
   /* perfect */
   position: absolute;
   margin-top: 8%;
   margin-left: 5%;
+  z-index: 9005;
 }
 
 /* Player Two Animations  */
@@ -260,12 +265,14 @@ body {
   position: absolute;
   margin-top: 7%;
   margin-left: 59%;
+  z-index: 9006;
 }
 #animateCounterTwo {
   /* perfect */
   position: absolute;
   margin-top: 12%;
   margin-left: 65%;
+  z-index: 9007;
 }
 #animateDefendTwo {
   /* perfect */
@@ -273,15 +280,18 @@ body {
   margin-top: 13%;
   height: 45%;
   margin-left: 63%;
+  z-index: 9008;
 }
 #animateStrongTwo {
   position: absolute;
   margin-top: 11%;
   margin-left: 58%;
+  z-index: 9009;
 }
 #animateStrongCounterTwo {
   /* perfect */
   position: absolute;
   margin-top: 8%;
   margin-left: 57%;
+  z-index: 9010;
 }
