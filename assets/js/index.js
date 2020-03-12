@@ -545,16 +545,16 @@ function battle(playerOne, playerTwo) {
     let damage1 = attack2 - defense1;
     let damage2 = attack1 - defense2;
 
-    playerTwo.stats.health = health1 - damage1;
-    playerOne.stats.health = health2 - damage2;
+    playerTwo.stats.health = health2 - damage1;
+    playerOne.stats.health = health1 - damage2;
 
     if (playerTwo.stats.health <= 0) {
       $("#battleLog").append(`<p>${p2} Has Feinted From Their Wounds!</p>`);
-      playerOne.stats.health = 0;
+      playerTwo.stats.health = 0;
       $(id2).attr("value", playerTwo.stats.health);
       knockout();
     } else if (playerOne.stats.health <= 0) {
-      playerTwo.stats.health = 0;
+      playerOne.stats.health = 0;
       $("#battleLog").append(`<p>${p1} Has Feinted From Their Wounds!</p>`);
       $(id).attr("value", playerOne.stats.health);
       knockout();
@@ -721,20 +721,15 @@ $("#reselect").on("click", function() {
 
 //Animation Functions For Case One
 //animateAttackOne
-//animateMissOne
 //animateCounterOne
 //animateDefendOne
-//animateMissOne
 //animateStongOne
-//AnimateStrongCounterOne
+//animateStrongCounterOne
 
 //Animation Functions For Case Two
-
 //animateAttackOne
-//animateMissOne
 //animateCounterOne
 //animateDefendOne
-//animateMissOne
 //animateStongOne
 //AnimateStrongCounterOne
 
