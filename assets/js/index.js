@@ -588,51 +588,84 @@ function battle(playerOne, playerTwo) {
   function damageStep(actionOne, actionTwo) {
     if (actionOne === "attack" && actionTwo === "attack") {
       doubleAttack(playerOne, playerTwo, "#healthOne", "#healthTwo");
+      showAnimation("#animateAttackOne", 1000);
+      showAnimation("#animateAttackTwo", 1000);
       enableOne();
     } else if (actionOne === "attack" && actionTwo === "strongAttack") {
       attackPlayer(playerOne, playerTwo, "#healthTwo");
+      showAnimation("#animateAttackTwo", 1000);
       strAttack(playerTwo, playerOne, "#healthOne");
+      showAnimation("#animateStrongOne", 1500);
       enableOne();
     } else if (actionOne === "attack" && actionTwo === "defense") {
       defendSelf(playerOne, playerTwo, "#health2");
+      showAnimation("#animateAttackTwo", 1000);
+      showAnimation("#animateDefendTwo", 1500);
       enableOne();
     } else if (actionOne === "attack" && actionTwo === "counter") {
       counter(playerOne, playerTwo, "#healthOne", "#healthTwo");
+      showAnimation("#animateAttackTwo", 1000);
+      showAnimation("#animateCounterOne", 1500);
       enableOne();
     } else if (actionOne === "defense" && actionTwo === "attack") {
       defendSelf(playerTwo, playerOne, "#healthOne");
+      showAnimation("#animateDefendOne", 1500);
+      showAnimation("#animateAttackOne", 1000);
       enableOne();
     } else if (actionOne === "defense" && actionTwo === "strongAttack") {
       defendSelfStr(playerTwo, playerOne, "#healthOne");
+      showAnimation("#animateDefendOne", 1500);
+      showAnimation("#animateStrongOne", 1500);
+
       enableOne();
     } else if (actionOne === "defense" && actionTwo === "defense") {
       doubleDefense(playerOne, playerTwo);
+      showAnimation("#animateDefendOne", 1500);
+      showAnimation("#animateDefendTwo", 1500);
       enableOne();
     } else if (actionOne === "defense" && actionTwo === "counter") {
       defendCounter(playerOne, playerTwo);
+      showAnimation("#animateDefendOne", 1500);
+
       enableOne();
     } else if (actionOne === "strongAttack" && actionTwo === "attack") {
       attackPlayer(playerTwo, playerOne, "#healthOne");
+      showAnimation("#animateStrongTwo", 1500);
+      showAnimation("#animateAttackOne", 1000);
       strAttack(playerOne, playerTwo, "#healthTwo");
       enableOne();
     } else if (actionOne === "strongAttack" && actionTwo === "defense") {
       defendSelfStr(playerOne, playerTwo, "#healthTwo");
+      showAnimation("#animateStrongTwo", 1500);
+      showAnimation("#animateDefendTwo", 1500);
+
       enableOne();
     } else if (actionOne === "strongAttack" && actionTwo === "strongAttack") {
       strAttack(playerOne, playerTwo, "#healthTwo");
       strAttack(playerTwo, playerOne, "#healthOne");
+      showAnimation("#animateStrongTwo", 1500);
+      showAnimation("#animateStrongOne", 1500);
       enableOne();
     } else if (actionOne === "strongAttack" && actionTwo === "counter") {
       strCounter(playerOne, playerTwo, "#healthOne", "#healthTwo");
+      showAnimation("#animateStrongTwo", 1500);
+      showAnimation("#animateStrongCounterOne", 1500);
+
       enableOne();
     } else if (actionOne === "counter" && actionTwo === "attack") {
       counter(playerTwo, playerOne, "#healthTwo", "#healthOne");
+      showAnimation("#animateAttackOne", 1000);
+      showAnimation("#animateCounterTwo", 1500);
       enableOne();
     } else if (actionOne === "counter" && actionTwo === "strongAttack") {
       strCounter(playerTwo, playerOne, "#healthTwo", "#healthOne");
+      showAnimation("#animateCounterTwo", 1500);
+      showAnimation("#animateStrongOne", 1500);
       enableOne();
     } else if (actionOne === "counter" && actionTwo === "defense") {
       defendCounter(playerTwo, playerOne);
+      showAnimation("#animateDefendTwo", 1500);
+
       enableOne();
     } else if (actionOne === "counter" && actionTwo === "counter") {
       doubleCounter(playerOne, playerTwo);
@@ -719,19 +752,17 @@ $("#reselect").on("click", function() {
   enableOne();
 });
 
-//Animation Functions For Case One
-//animateAttackOne
-//animateCounterOne
-//animateDefendOne
-//animateStrongOne
-//animateStrongCounterOne
-
-//Animation Functions For Case Two
-//animateAttackTwo
-//animateCounterTwo
-//animateDefendTwo
-//animateStrongTwo
-//AnimateStrongCounterTwo
+// Animation Functions
+// showAnimation("#animateAttackOne", 1000);
+// showAnimation("#animateAttackTwo", 1000);
+// showAnimation("#animateCounterOne", 1500);
+// showAnimation("#animateCounterTwo", 1500);
+// showAnimation("#animateDefendOne", 1500);
+// showAnimation("#animateDefendTwo", 1500);
+// showAnimation("#animateStrongOne", 1500);
+// showAnimation("#animateStrongTwo", 1500);
+// showAnimation("#animateStrongCounterOne", 1500);
+// showAnimation("#animateStrongCounterOne", 1500);
 
 function showAnimation(id, time) {
   $(id).removeClass("hide");
