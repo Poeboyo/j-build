@@ -220,3 +220,35 @@ body {
   margin-top: 60%;
   width: 100%;
 }
+
+#animateAttackOne {
+  /* perfect */
+  position: absolute;
+  margin-top: 7%;
+  margin-left: 6%;
+}
+#animateCounterOne {
+  /* perfect */
+  position: absolute;
+  margin-top: 12%;
+  margin-left: 12.5%;
+}
+#animateDefendOne {
+  /* perfect */
+  position: absolute;
+  margin-top: 13%;
+  height: 45%;
+  margin-left: 10%;
+}
+#animateStrongOne {
+  /* perfect */
+  position: absolute;
+  margin-top: 11%;
+  margin-left: 5%;
+}
+#animateStrongCounterOne {
+  /* perfect */
+  position: absolute;
+  margin-top: 8%;
+  margin-left: 5%;
+}

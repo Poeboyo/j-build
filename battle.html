@@ -140,11 +140,30 @@
                 BATTLE
             </a>
             <div id="battleArea" class="hide">
+
+                <!-- Quicktime animations for Case One -->
+                <img src="./assets/images/attack.gif" id="animateAttackOne" class="">
+                <img src="./assets/images/counter.gif" id="animateCounterOne" class="">
+                <img src="./assets/images/defend.gif" id="animateDefendOne" class="">
+                <img src="./assets/images/strongAttack.gif" id="animateStrongOne" class="">
+                <img src="./assets/images/strongCounter.gif" id="animateStrongCounterOne" class="">
+
+                <!-- Quicktime animations for Case Two -->
+                <!-- <img src="./assets/images/attack.gif" id="animateAttackTwo" class="">
+                <img src="./assets/images/counter.gif" id="animateCounterTwo" class="">
+                <img src="./assets/images/defend.gif" id="animateDefenseTwo" class="">
+                <img src="./assets/images/strongAttack.gif" id="animateStrongTwo" class="">
+                <img src="./assets/images/strongCounter.gif" id="animateStrongCounterTwo" class=""> -->
+
+                <!-- Player One Display Area  -->
                 <div id="caseOne">
+                    <!-- Player One HealthBar -->
                     <progress id="healthOne" value="100" max="100"></progress>
+                    <!-- IMG For Player One -->
                     <img id="playerOne"
                         src="https://vignette.wikia.nocookie.net/mario/images/6/62/840px-SuperMarioParty_Waluigi.png/revision/latest/scale-to-width-down/310?cb=20190519205517"
                         alt="player one" class="flip">
+                    <!-- Player One Battle Buttons -->
                     <button id="attackOne" class="red btn">
                         Attack
                     </button>
@@ -158,14 +177,20 @@
                         Counter
                     </button>
                 </div>
+                <!-- Events During Battle Displayed Here -->
                 <div id="battleLog">
                     <h3>BATTLE LOG</h3>
                 </div>
+
+                <!-- Player Two Display Area  -->
                 <div id="caseTwo">
+                    <!-- Player Two Healthbar -->
                     <progress id="healthTwo" value="100" max="100"></progress>
+                    <!-- IMG for Player Two -->
                     <img id="playerTwo"
                         src="https://vignette.wikia.nocookie.net/mario/images/6/62/840px-SuperMarioParty_Waluigi.png/revision/latest/scale-to-width-down/310?cb=20190519205517"
                         alt="player two">
+                    <!-- Player Two Battle Buttons -->
                     <button id="attackTwo" class="blue btn">
                         Attack
                     </button>
@@ -179,6 +204,7 @@
                         Counter
                     </button>
                 </div>
+                <!-- Game Ending PopUp  -->
                 <div id="game-end" class="hide">
                     <a class="waves-effect waves-light btn-large blue" id="rematch">Rematch</a>
                     <a class="waves-effect waves-light btn-large red" id="reselect">Character Selection</a>
@@ -188,24 +214,8 @@
         </div>
 
     </div>
-    <!-- Quicktime animations for Case One -->
-    <img src="./assets/images/attack.gif" id="animateAttackOne" class="">
-    <img src="./assets/images/counter.gif" id="animateCounterOne" class="">
-    <img src="./assets/images/defend.gif" id="animateDefenseOne" class="">
-    <img src="./assets/images/strongAttack.gif" id="animateStrongOne" class="">
-    <img src="./assets/images/strongCounter.gif" id="animateStrongCounterOne" class="">
 
-    <!-- Quicktime animations for Case Two -->
-    <img src="./assets/images/attack.gif" id="animateAttackTwo" class="">
-    <img src="./assets/images/counter.gif" id="animateCounterTwo" class="">
-    <img src="./assets/images/defend.gif" id="animateDefenseTwo" class="">
-    <img src="./assets/images/strongAttack.gif" id="animateStrongTwo" class="">
-    <img src="./assets/images/strongCounter.gif" id="animateStrongCounterTwo" class="">
     </div>
-
-
-
-
 
     <script src="assets/js/index.js"></script>
 </body>
