@@ -734,10 +734,12 @@ $("#reselect").on("click", function() {
 //AnimateStrongCounterOne
 
 function showAnimation(id) {
-  $(id)
-    .show()
-    .data("active", true);
+  $(id).removeClass("hide");
   setTimeout(function() {
-    id.hide().data("active", false);
-  }, 4000);
+    $(id)
+      .addClass("hide")
+      .data("active", false);
+  }, 2000);
 }
+
+showAnimation("#animateAttackOne");
