@@ -723,23 +723,21 @@ $("#reselect").on("click", function() {
 //animateAttackOne
 //animateCounterOne
 //animateDefendOne
-//animateStongOne
+//animateStrongOne
 //animateStrongCounterOne
 
 //Animation Functions For Case Two
-//animateAttackOne
-//animateCounterOne
-//animateDefendOne
-//animateStongOne
-//AnimateStrongCounterOne
+//animateAttackTwo
+//animateCounterTwo
+//animateDefendTwo
+//animateStrongTwo
+//AnimateStrongCounterTwo
 
-function showAnimation(id) {
+function showAnimation(id, time) {
   $(id).removeClass("hide");
   setTimeout(function() {
     $(id)
       .addClass("hide")
       .data("active", false);
-  }, 2000);
+  }, time);
 }
-
-showAnimation("#animateAttackOne");
