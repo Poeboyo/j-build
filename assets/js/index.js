@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
 let playerOne;
 let playerTwo;
 
-let odimm = {
-  name: "Gaunter O'Dimm",
+let chisaki = {
+  name: "Chisaki Kai",
   img:
-    "https://vignette.wikia.nocookie.net/witcher/images/f/f3/Tw3_journal_mirrorman.png/revision/latest/scale-to-width-down/350?cb=20170501180556",
+    "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/4/4d/Kai_Chisaki_Anime_Action.png/revision/latest/scale-to-width-down/202?cb=20191030164007",
   stats: {
     health: 100,
     attack: 15,
@@ -85,10 +85,10 @@ let link = {
   }
 };
 
-let inteleon = {
-  name: "Inteleon",
+let hollow = {
+  name: "Hollow Knight",
   img:
-    "https://cdn.bulbagarden.net/upload/thumb/e/e4/818Inteleon.png/250px-818Inteleon.png",
+    "https://vignette.wikia.nocookie.net/hollowknight/images/2/27/The_Knight.png/revision/latest/scale-to-width-down/146?cb=20170712213446",
   stats: {
     health: 100,
     attack: 10,
@@ -158,8 +158,8 @@ function setPlayerTwo() {
   }
 }
 
-$("#odimmOne").on("click", function() {
-  playerOne = odimm;
+$("#chisakiOne").on("click", function() {
+  playerOne = chisaki;
   setPlayerOne();
   imgSwap(playerOne, playerTwo);
 });
@@ -203,13 +203,13 @@ $("#waluigiOne").on("click", function() {
   setPlayerOne();
   imgSwap(playerOne, playerTwo);
 });
-$("#inteleonOne").on("click", function() {
-  playerOne = inteleon;
+$("#hollowOne").on("click", function() {
+  playerOne = hollow;
   setPlayerOne();
   imgSwap(playerOne, playerTwo);
 });
-$("#odimmTwo").on("click", function() {
-  playerTwo = odimm;
+$("#chisakiTwo").on("click", function() {
+  playerTwo = chisaki;
   setPlayerOne();
   imgSwap(playerOne, playerTwo);
 });
@@ -254,8 +254,8 @@ $("#waluigiTwo").on("click", function() {
   setPlayerTwo();
   imgSwap(playerOne, playerTwo);
 });
-$("#inteleonTwo").on("click", function() {
-  playerTwo = inteleon;
+$("#hollowTwo").on("click", function() {
+  playerTwo = hollow;
   setPlayerTwo();
   imgSwap(playerOne, playerTwo);
 });
