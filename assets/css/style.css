@@ -207,3 +207,16 @@ body {
   position: absolute;
   margin-top: 14%;
 }
+
+#rematch {
+  position: absolute;
+  margin-right: 50%;
+  margin-top: 80%;
+  width: 100%;
+}
+#reselect {
+  position: absolute;
+  margin-right: 50%;
+  margin-top: 60%;
+  width: 100%;
+}

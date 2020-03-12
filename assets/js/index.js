@@ -210,7 +210,7 @@ $("#hollowOne").on("click", function() {
 });
 $("#chisakiTwo").on("click", function() {
   playerTwo = chisaki;
-  setPlayerOne();
+  setPlayerTwo();
   imgSwap(playerOne, playerTwo);
 });
 
@@ -718,3 +718,31 @@ $("#reselect").on("click", function() {
   $("#battleArea").addClass("hide");
   enableOne();
 });
+
+//Animation Functions For Case One
+//animateAttackOne
+//animateMissOne
+//animateCounterOne
+//animateDefendOne
+//animateMissOne
+//animateStongOne
+//AnimateStrongCounterOne
+
+//Animation Functions For Case Two
+
+//animateAttackOne
+//animateMissOne
+//animateCounterOne
+//animateDefendOne
+//animateMissOne
+//animateStongOne
+//AnimateStrongCounterOne
+
+function showAnimation(id) {
+  $(id)
+    .show()
+    .data("active", true);
+  setTimeout(function() {
+    id.hide().data("active", false);
+  }, 4000);
+}
