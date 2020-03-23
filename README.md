@@ -6,7 +6,7 @@ This project was originally set to be built in react and was initially made in j
 
 ## How it's made
 
--The application starts out on the home page which on click will bring you to the character selection screen, where (obviously) you select a Character to fight for you and a second player.
+- The application starts out on the home page which on click will bring you to the character selection screen, where (obviously) you select a Character to fight for you and a second player.
 
 ```javascript
 function setPlayerOne() {
@@ -30,11 +30,11 @@ function setPlayerTwo() {
 }
 ```
 
--After player selections have been made, this triggers the battle button to enable, allowing both players to begin their fight. Each Player picks and attack
--- A Standard Attack = Success Rate: 95%
--- A Devastating Strong Attack = Success Rate: 35%
--- Defense = Has a chance to Nullify or Reduce incoming Damage
--- A Counter, to Possibly Reverse an Enemy's Attack = Success Rate: 35%
+- After player selections have been made, this triggers the battle button to enable, allowing both players to begin their fight. Each Player picks and attack
+  - A Standard Attack = Success Rate: 95%
+  - A Devastating Strong Attack = Success Rate: 35%
+  - Defense = Has a chance to Nullify or Reduce incoming Damage
+  - A Counter, to Possibly Reverse an Enemy's Attack = Success Rate: 35%
 
 -Each has a chance to hit and then a function is run to compare inputs and success rates of each chosen attack to replicate the outcome of the two Opponents Clashing.
 
@@ -81,7 +81,7 @@ function damageStep(actionOne, actionTwo) {
 
 ## Difficulties and Learning
 
--The main difficulties that came with this project was making everything work in unison, it was simple to make the functions, although it was quite a few days to figure out HOW I wished for the game to play out and also some objects returning incorrect values that were applied when the damage step was calculated. This project is my main focus for now and just refining it to be a fun experince for nerds who would want to see their favorite characters clash from separate series.
+- The main difficulties that came with this project was making everything work in unison, it was simple to make the functions, although it was quite a few days to figure out HOW I wished for the game to play out and also some objects returning incorrect values that were applied when the damage step was calculated. This project is my main focus for now and just refining it to be a fun experince for nerds who would want to see their favorite characters clash from separate series.
 
 ## Future Plans
 
