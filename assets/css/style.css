@@ -6,43 +6,39 @@ body {
 /* Home Page CSS */
 #homepage {
   width: 100vw;
-  height: 75vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
 }
 
 #lightningLeft {
-  width: 40%;
-  height: 48%;
+  margin-left: -19%;
+  flex-direction: row;
   position: absolute;
-  z-index: 3;
+  justify-content: flex-start;
 }
 #lightningRight {
-  width: 40%;
-  height: 48%;
+  margin-left: 19%;
+  flex-direction: row;
   position: absolute;
-  z-index: 2;
-  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
 #logo {
-  width: 33%;
-  height: 28%;
+  margin-top: 18%;
+  width: 45%;
+  height: 33%;
 }
 #pulse {
-  z-index: 0;
-  width: 50%;
   position: absolute;
-  margin-top: 7%;
-  margin-left: -46%;
+  justify-content: end;
 }
 #toBattleButton {
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
-  margin-left: 33%;
-  margin-right: 33%;
+  margin-left: 33.25%;
+  margin-right: 33.25%;
 }
 
 /* Battle Screen CSS */
