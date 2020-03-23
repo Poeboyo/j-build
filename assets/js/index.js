@@ -713,9 +713,9 @@ function imgSwap(playerOne, playerTwo) {
 
 $("#battleButton").on("click", function() {
   $("#battleArea").removeClass("hide");
-  battle(playerOne, playerTwo);
   $("#battleButton").addClass("disabled");
-  killInstance(battle);
+  battle(playerOne, playerTwo);
+  window.nope = battle;
 });
 
 $("#rematch").on("click", function() {
@@ -738,6 +738,7 @@ $("#reselect").on("click", function() {
   $("#battleLog").append("<h3>BATTLE LOG</h3>");
   $("#game-end").addClass("hide");
   $("#battleArea").addClass("hide");
+
   playerOne = undefined;
   playerTwo = undefined;
   enableOne();
@@ -760,10 +761,4 @@ function playNoise(id) {
 function knockout() {
   $("#game-end").removeClass("hide");
   disableOne();
-}
-
-function killInstance(func) {
-  setTimeout(function() {
-    $(func).data("active", false);
-  }, 10);
 }
