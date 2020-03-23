@@ -751,6 +751,8 @@ $("#reselect").on("click", function() {
   $("#battleLog").append("<h3>BATTLE LOG</h3>");
   $("#game-end").addClass("hide");
   $("#battleArea").addClass("hide");
+  playerOne = undefined;
+  playerTwo = undefined;
   enableOne();
 });
 
