@@ -573,14 +573,6 @@ function battle(playerOne, playerTwo) {
     );
     playNoise("#shieldNoise");
   }
-
-  //CSS Effects for a Successful Hit
-  function hit(str) {
-    $(str).css({
-      opacity: "1"
-    });
-  }
-
   //Stores Player One's Action
   let actionOne;
   //Stores Player Two's Action
@@ -674,7 +666,6 @@ function battle(playerOne, playerTwo) {
       enableOne();
     }
   }
-
   disableTwo();
 }
 
@@ -720,15 +711,11 @@ function imgSwap(playerOne, playerTwo) {
   $("#playerTwo").attr("src", playerTwo.img);
 }
 
-function knockout() {
-  $("#game-end").removeClass("hide");
-  disableOne();
-}
-
 $("#battleButton").on("click", function() {
   $("#battleArea").removeClass("hide");
   battle(playerOne, playerTwo);
   $("#battleButton").addClass("disabled");
+  killInstance(battle);
 });
 
 $("#rematch").on("click", function() {
@@ -769,4 +756,14 @@ function playNoise(id) {
   $(id)
     .get(0)
     .play();
+}
+function knockout() {
+  $("#game-end").removeClass("hide");
+  disableOne();
+}
+
+function killInstance(func) {
+  setTimeout(function() {
+    $(func).data("active", false);
+  }, 10);
 }
