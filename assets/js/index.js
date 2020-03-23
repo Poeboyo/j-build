@@ -127,14 +127,7 @@ let waluigi = {
 function setPlayerOne() {
   $("#firstChoice").text("Choose: " + playerOne.name);
   $("#statsOne").text(
-    "ATK: " +
-      playerOne.stats.attack +
-      " " +
-      "DEF: " +
-      playerOne.stats.defense +
-      " " +
-      "SPD: " +
-      playerOne.stats.speed
+    `ATK: ${playerOne.stats.attack}  DEF: ${playerOne.stats.defense} SPD: ${playerOne.stats.speed}`
   );
   if (playerOne && playerTwo) {
     $("#battleButton").removeClass("disabled");
@@ -142,16 +135,9 @@ function setPlayerOne() {
 }
 
 function setPlayerTwo() {
-  $("#secondChoice").text("Choose: " + playerTwo.name);
+  $("#secondChoice").text(`Choose: ${playerTwo.name}`);
   $("#statsTwo").text(
-    "ATK: " +
-      playerTwo.stats.attack +
-      " " +
-      "DEF: " +
-      playerTwo.stats.defense +
-      " " +
-      "SPD: " +
-      playerTwo.stats.speed
+    `ATK: ${playerTwo.stats.attack}  DEF: ${playerTwo.stats.defense} SPD: ${playerTwo.stats.speed}`
   );
   if (playerOne && playerTwo) {
     $("#battleButton").removeClass("disabled");
