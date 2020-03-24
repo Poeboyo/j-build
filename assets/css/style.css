@@ -30,8 +30,7 @@ body {
 #snazzy-background {
   width: 100%;
   height: 100vh;
-  background: url("https://media3.giphy.com/media/2dnGHOAQt1tIziib5X/giphy.webp?cid=790b761176c7a548374dfaa00567c706f46dfe2b8ee32cbe&rid=giphy.webp")
-    no-repeat center fixed;
+  background: url("../images/sphere.webp") no-repeat center fixed;
   background-size: cover;
   animation: fadeIn ease 9s;
   -webkit-animation: fadeIn ease 9s;
@@ -88,10 +87,15 @@ body {
 #lightningLeft {
   margin-left: -14%;
   position: absolute;
+  width: auto;
+  height: 33%;
 }
 #lightningRight {
   margin-left: 12%;
   position: absolute;
+  height: 33%;
+  width: auto;
+
   transform: scaleX(-1);
 }
 
@@ -180,8 +184,7 @@ body {
   position: absolute;
   z-index: 101;
   margin-top: -53%;
-  background: url("https://media3.giphy.com/media/2dnGHOAQt1tIziib5X/giphy.webp?cid=790b761176c7a548374dfaa00567c706f46dfe2b8ee32cbe&rid=giphy.webp")
-    no-repeat center center fixed;
+  background: url("../images/sphere.webp") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
