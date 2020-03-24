@@ -158,47 +158,22 @@ body {
   margin-bottom: 5%;
 }
 
-#attackTwo {
-  position: absolute;
-  margin-top: 160%;
-  margin-left: -86%;
-}
-#defendTwo {
-  position: absolute;
-  margin-top: 160%;
-  margin-left: -57.25%;
-}
-#strAttackTwo {
-  position: absolute;
-  margin-top: 175%;
-  margin-left: -65%;
-}
-#counterTwo {
-  position: absolute;
-  margin-top: 160%;
-  margin-left: -28%;
+/* Player One Buttons  */
+#playerOneButtons {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#attackOne {
-  position: absolute;
-  margin-top: 160%;
-  margin-left: -86%;
+/* Player Two Buttons */
+#playerTwoButtons {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#defendOne {
-  position: absolute;
-  margin-top: 160%;
-  margin-left: -57.25%;
-}
-#strAttackOne {
-  position: absolute;
-  margin-top: 175%;
-  margin-left: -65%;
-}
-#counterOne {
-  position: absolute;
-  margin-top: 160%;
-  margin-left: -28%;
-}
+
 #healthOne {
   background-color: greenyellow;
   position: absolute;
