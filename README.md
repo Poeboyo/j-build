@@ -89,3 +89,4 @@ function damageStep(actionOne, actionTwo) {
 - [ ] Allowing Remote Play Via Bitly or a similar service
 - [ ] Implementing a Remote Controller Package such as https://www.npmjs.com/package/gamecontroller.js
 - [ ] Integrating a backend, allowing users create and share their characters and battle with others.
+- I feel I should mention that these features will be available and worked on in the React version of this application due to the fact that Vanilla JavaScript makes me question my willingness to wake up tomorrow.
