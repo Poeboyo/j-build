@@ -4,8 +4,8 @@ body {
 }
 
 #curtain {
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   position: absolute;
   background: #000000;
@@ -28,15 +28,11 @@ body {
   justify-content: center;
 }
 #snazzy-background {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url("https://media3.giphy.com/media/2dnGHOAQt1tIziib5X/giphy.webp?cid=790b761176c7a548374dfaa00567c706f46dfe2b8ee32cbe&rid=giphy.webp")
     no-repeat center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  background-color: #000000;
   animation: fadeIn ease 9s;
   -webkit-animation: fadeIn ease 9s;
   -moz-animation: fadeIn ease 9s;
@@ -100,7 +96,7 @@ body {
 }
 
 #logo {
-  margin-top: 16%;
+  margin-top: 15%;
   width: 45%;
   height: 33%;
   margin-left: 24%;
