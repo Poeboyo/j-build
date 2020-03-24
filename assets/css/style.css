@@ -121,12 +121,11 @@ body {
 /* Battle Area CSS */
 
 #battleArea {
-  height: 110vh;
+  height: 100vh;
   width: 100vw;
   position: absolute;
-  background-color: black;
   z-index: 101;
-  margin-top: -51%;
+  margin-top: -46%;
   background: url("https://media3.giphy.com/media/2dnGHOAQt1tIziib5X/giphy.webp?cid=790b761176c7a548374dfaa00567c706f46dfe2b8ee32cbe&rid=giphy.webp")
     no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -134,28 +133,25 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-color: #000000;
+  display: flex;
+  flex-direction: row;
 }
 .flip {
   transform: scaleX(-1);
+}
+
+#caseTwo {
+  margin-top: 13%;
+}
+#caseOne {
+  margin-top: 13%;
 }
 
 #playerOne,
 #playerTwo {
   width: 295px;
   height: 475px;
-  margin-top: 8%;
-}
-#caseTwo {
-  position: absolute;
-  margin-left: 64%;
-  margin-top: 17%;
-  margin-bottom: 5%;
-}
-#caseOne {
-  position: absolute;
-  margin-top: 17%;
-  margin-left: 14%;
-  margin-bottom: 5%;
+  margin-top: 3vh;
 }
 
 /* Player One Buttons  */
@@ -163,7 +159,6 @@ body {
   margin-top: 2%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 /* Player Two Buttons */
@@ -171,19 +166,18 @@ body {
   margin-top: 2%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 #healthOne {
   background-color: greenyellow;
   position: absolute;
-  width: 70%;
+  width: 33%;
   margin-left: 12%;
 }
 #healthTwo {
   background-color: greenyellow;
   position: absolute;
-  width: 70%;
+  width: 33%;
   margin-left: 12%;
 }
 #battleLog {
