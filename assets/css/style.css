@@ -29,9 +29,9 @@ body {
 }
 #snazzy-background {
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
   background: url("https://media3.giphy.com/media/2dnGHOAQt1tIziib5X/giphy.webp?cid=790b761176c7a548374dfaa00567c706f46dfe2b8ee32cbe&rid=giphy.webp")
-    no-repeat center center fixed;
+    no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -90,29 +90,27 @@ body {
 }
 
 #lightningLeft {
-  margin-top: 1%;
-  margin-left: -19%;
+  margin-left: -14%;
   position: absolute;
 }
 #lightningRight {
-  margin-top: 1%;
-  margin-left: 18%;
+  margin-left: 12%;
   position: absolute;
   transform: scaleX(-1);
 }
 
 #logo {
-  margin-top: 18%;
+  margin-top: 16%;
   width: 45%;
   height: 33%;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 24%;
+  margin-right: 24%;
 }
 #pulse {
   position: absolute;
   justify-content: end;
-  margin-top: 15%;
-  width: 38%;
+  margin-top: 14%;
+  width: 45%;
 }
 #toBattleButton {
   display: flex;
