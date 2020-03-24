@@ -1,22 +1,131 @@
-import link from "./roster";
-import chisaki from "./roster";
-import allForOne from "./roster";
-import allMight from "./roster";
-import triss from "./roster";
-import waluigi from "./roster";
-import deku from "./roster";
-import endeavor from "./roster";
-import hollow from "./roster";
-import goku from "./roster";
-
 document.addEventListener("DOMContentLoaded", function() {
   var elems = document.querySelectorAll(".carousel");
   M.Carousel.init(elems, {});
 });
+
+let chisaki = {
+  name: "Chisaki Kai",
+  img:
+    "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/4/4d/Kai_Chisaki_Anime_Action.png/revision/latest/scale-to-width-down/202?cb=20191030164007",
+  stats: {
+    health: 100,
+    attack: 15,
+    defense: 5,
+    evasion: 15,
+    speed: 5
+  }
+};
+
+let endeavor = {
+  name: "Endeavor",
+  img:
+    "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/2/22/Endeavor_Anime_Profile.png/revision/latest/scale-to-width-down/239?cb=20170906213725",
+  stats: { health: 100, attack: 15, defense: 5, evasion: 10, speed: 5 }
+};
+
+let allMight = {
+  name: "All Might",
+  img:
+    "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/5/55/All_Might_Hero_Form_Full_Body.png/revision/latest/scale-to-width-down/311?cb=20190129015644",
+  stats: {
+    health: 100,
+    attack: 20,
+    defense: 10,
+    evasion: 10,
+    speed: 10
+  }
+};
+
+let allForOne = {
+  name: "All For One",
+  img:
+    "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/3/32/All_For_One_Profile.png/revision/latest/scale-to-width-down/243?cb=20180528014920",
+  stats: {
+    health: 100,
+    attack: 20,
+    defense: 5,
+    evasion: 5,
+    speed: 10
+  }
+};
+
+let triss = {
+  name: "Triss Merigold",
+  img:
+    "https://vignette.wikia.nocookie.net/witcher/images/2/27/Triss-TW3-new-render.png/revision/latest/scale-to-width-down/313?cb=20160402173701",
+  stats: {
+    health: 100,
+    attack: 10,
+    defense: 10,
+    evasion: 10,
+    speed: 10
+  }
+};
+
+let deku = {
+  name: "Izuku Midoriya",
+  img:
+    "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/f/f7/Izuku_Midoriya_Hero_Costume_Action_Pose.png/revision/latest/scale-to-width-down/350?cb=20190909030259",
+  stats: { health: 100, attack: 10, defense: 10, evasion: 10, speed: 15 }
+};
+
+let link = {
+  name: "Link",
+  img:
+    "https://vignette.wikia.nocookie.net/zelda/images/5/57/Breath_of_the_Wild_Artwork_Link_%28Official_Artwork%29.png/revision/latest/scale-to-width-down/350?cb=20160623185226",
+  stats: {
+    health: 100,
+    attack: 15,
+    defense: 5,
+    evasion: 10,
+    speed: 10
+  }
+};
+
+let hollow = {
+  name: "Hollow Knight",
+  img:
+    "https://vignette.wikia.nocookie.net/hollowknight/images/2/27/The_Knight.png/revision/latest/scale-to-width-down/146?cb=20170712213446",
+  stats: {
+    health: 100,
+    attack: 10,
+    defense: 5,
+    evasion: 10,
+    speed: 20
+  }
+};
+
+let goku = {
+  name: "Son Goku",
+  img:
+    "https://vignette.wikia.nocookie.net/p__/images/2/22/Dragon-Ball-Goku-PNG-Free-Download.png/revision/latest/scale-to-width-down/347?cb=20181207162901&path-prefix=protagonist",
+  stats: {
+    health: 100,
+    attack: 20,
+    defense: 10,
+    evasion: 0,
+    speed: 10
+  }
+};
+
+let waluigi = {
+  name: "Waluigi",
+  img:
+    "https://vignette.wikia.nocookie.net/mario/images/6/62/840px-SuperMarioParty_Waluigi.png/revision/latest/scale-to-width-down/310?cb=20190519205517",
+  stats: {
+    health: 100,
+    attack: 20,
+    defense: 5,
+    evasion: 20,
+    speed: 10
+  }
+};
+
 let playerOne;
 let playerTwo;
 
-function setPlayerOne() {
+function setPlayerOne(selection) {
+  playerOne = selection;
   $("#firstChoice").text("Choose: " + playerOne.name);
   $("#statsOne").text(
     `ATK: ${playerOne.stats.attack}  DEF: ${playerOne.stats.defense} SPD: ${playerOne.stats.speed}`
@@ -26,7 +135,8 @@ function setPlayerOne() {
   }
 }
 
-function setPlayerTwo() {
+function setPlayerTwo(selection) {
+  playerTwo = selection;
   $("#secondChoice").text(`Choose: ${playerTwo.name}`);
   $("#statsTwo").text(
     `ATK: ${playerTwo.stats.attack}  DEF: ${playerTwo.stats.defense} SPD: ${playerTwo.stats.speed}`
@@ -38,140 +148,120 @@ function setPlayerTwo() {
 
 // Sets Player One to Chisaki
 $("#chisakiOne").on("click", function() {
-  playerOne = chisaki;
-  setPlayerOne();
+  setPlayerOne(chisaki);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player One to Endeavor
 $("#endeavorOne").on("click", function() {
-  playerOne = endeavor;
-  setPlayerOne();
+  setPlayerOne(endeavor);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player One to Deku
 $("#dekuOne").on("click", function() {
-  playerOne = deku;
-  setPlayerOne();
+  setPlayerOne(deku);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player One to Triss Merigold
 $("#trissOne").on("click", function() {
-  playerOne = triss;
-  setPlayerOne();
+  setPlayerOne(triss);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player One to All For One
 $("#allForOneOne").on("click", function() {
-  playerOne = allForOne;
-  setPlayerOne();
+  setPlayerOne(allForOne);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player One to All Might
 $("#allmightOne").on("click", function() {
-  playerOne = allMight;
-  setPlayerOne();
+  setPlayerOne(allMight);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player One to Link
 $("#linkOne").on("click", function() {
-  playerOne = link;
-  setPlayerOne();
+  setPlayerOne(link);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player One to Goku
 $("#gokuOne").on("click", function() {
-  playerOne = goku;
-  setPlayerOne();
+  setPlayerOne(goku);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player One to Waluigi
 $("#waluigiOne").on("click", function() {
-  playerOne = waluigi;
-  setPlayerOne();
+  setPlayerOne(waluigi);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player One to Hollow Knight
 $("#hollowOne").on("click", function() {
-  playerOne = hollow;
-  setPlayerOne();
+  setPlayerOne(hollow);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player Two to Chisaki
 $("#chisakiTwo").on("click", function() {
-  playerTwo = chisaki;
-  setPlayerTwo();
+  setPlayerTwo(chisaki);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player Two to Endeavor
 $("#endeavorTwo").on("click", function() {
-  playerTwo = endeavor;
-  setPlayerTwo();
+  setPlayerTwo(endeavor);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player Two to Deku
 $("#dekuTwo").on("click", function() {
-  playerTwo = deku;
-  setPlayerTwo();
+  setPlayerTwo(deku);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player Two to Triss Merigold
 $("#trissTwo").on("click", function() {
-  playerTwo = triss;
-  setPlayerTwo();
+  setPlayerTwo(triss);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player Two to All For One
 $("#allForOneTwo").on("click", function() {
-  playerTwo = allForOne;
-  setPlayerTwo();
+  setPlayerTwo(allForOne);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player Two to All Might
 $("#allmightTwo").on("click", function() {
-  playerTwo = allMight;
-  setPlayerTwo();
+  setPlayerTwo(allMight);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player Two to Link
 $("#linkTwo").on("click", function() {
-  playerTwo = link;
-  setPlayerTwo();
+  setPlayerTwo(link);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player Two to Goku
 $("#gokuTwo").on("click", function() {
-  playerTwo = goku;
-  setPlayerTwo();
+  setPlayerTwo(goku);
   imgSwap(playerOne, playerTwo);
 });
 // Sets Player Two to Waluigi
 $("#waluigiTwo").on("click", function() {
-  playerTwo = waluigi;
-  setPlayerTwo();
+  setPlayerTwo(waluigi);
   imgSwap(playerOne, playerTwo);
 });
 
 // Sets Player Two to Hollow Knight
 $("#hollowTwo").on("click", function() {
-  playerTwo = hollow;
-  setPlayerTwo();
+  setPlayerTwo(hollow);
   imgSwap(playerOne, playerTwo);
 });
 
