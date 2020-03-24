@@ -10,6 +10,17 @@ body {
   display: flex;
   justify-content: center;
 }
+#consume {
+  width: 100vw;
+  height: 95vh;
+  background: url("https://media3.giphy.com/media/2dnGHOAQt1tIziib5X/giphy.webp?cid=790b761176c7a548374dfaa00567c706f46dfe2b8ee32cbe&rid=giphy.webp")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #000000;
+}
 
 #lightningLeft {
   margin-top: 1%;
@@ -110,8 +121,8 @@ body {
 /* Battle Area CSS */
 
 #battleArea {
-  height: 110%;
-  width: 100%;
+  height: 110vh;
+  width: 100vw;
   position: absolute;
   background-color: black;
   z-index: 101;
@@ -130,8 +141,8 @@ body {
 
 #playerOne,
 #playerTwo {
-  width: 295px;
-  height: 475px;
+  width: 90%;
+  height: 175%;
   margin-top: 8%;
 }
 #caseTwo {

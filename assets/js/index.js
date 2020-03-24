@@ -599,7 +599,7 @@ let actionTwo;
 function damageStep(actionOne, actionTwo) {
   disableTwo();
   if (actionOne === "attack" && actionTwo === "attack") {
-    doubleAttack(playerOne, playerTwo, "#healthOne", "#healthTwo");
+    doubleAttack(playerOne, playerTwo, "#healthTwo", "#healthOne");
     showAnimation("#animateAttackOne", 900);
     showAnimation("#animateAttackTwo", 900);
     enableOne();
