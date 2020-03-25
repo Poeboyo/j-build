@@ -18,6 +18,7 @@ body {
   -moz-animation: fadeOut ease 8s;
   -o-animation: fadeOut ease 8s;
   -ms-animation: fadeOut ease 8s;
+  opacity: 0;
 }
 
 @keyframes fadeOut {
@@ -66,9 +67,10 @@ body {
 }
 
 #curtain-text {
-  font-size: xx-large;
+  font-size: x-large;
   color: #ffffff;
-  font-family: Impact, fantasy;
+  font-weight: 5000;
+  text-align: center;
 }
 /* Home Page CSS */
 #homepage {
@@ -227,6 +229,11 @@ body {
 }
 
 /* Battle Area CSS */
+
+#battlepage {
+  width: 100vw;
+  height: 100vh;
+}
 
 #battleArea {
   height: 100vh;
