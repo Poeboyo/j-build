@@ -186,16 +186,25 @@ body {
   flex-direction: row;
 }
 
+#logos-battle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 #battleLogo {
   z-index: -11;
+  width: 33%;
+  height: 23%;
+  justify-content: center;
 }
-/* #pulseBattle {
-  z-index: 100000;
+#pulseBattle {
+  z-index: 500;
   position: absolute;
-  margin-left: 22%;
   width: 45%;
   margin-top: -16%;
-} */
+  justify-content: center;
+}
 
 #back-button {
   margin-top: 1%;
