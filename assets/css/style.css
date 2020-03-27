@@ -184,6 +184,7 @@ body {
   z-index: 0;
   display: flex;
   flex-direction: row;
+  margin-top: -4%;
 }
 
 #logos-battle {
@@ -203,7 +204,6 @@ body {
   position: absolute;
   width: 45%;
   margin-top: -16%;
-  justify-content: center;
 }
 
 #back-button {
@@ -229,7 +229,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-self: center;
+  margin-top: 5%;
 }
 #battleButton {
   z-index: 90;
@@ -267,29 +267,20 @@ body {
 
 #playerOne,
 #playerTwo {
-  width: 295px;
+  width: 300px;
   height: 475px;
   margin-top: 3vh;
 }
 
-/* Player One Buttons  */
-#playerOneButtons {
-  margin-top: 2%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Player Two Buttons */
+/* Player One and Two Buttons  */
+#playerOneButtons,
 #playerTwoButtons {
   margin-top: 2%;
   display: flex;
   flex-direction: column;
 }
 
-#healthOne {
-  background-color: greenyellow;
-  width: 100%;
-}
+#healthOne,
 #healthTwo {
   background-color: greenyellow;
   width: 100%;
