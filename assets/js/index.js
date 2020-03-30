@@ -330,11 +330,33 @@ document.onkeyup = function(event) {
     disableOne();
     enableTwo();
   } else if (userInput === "a") {
+    actionOne = "strongAttack";
+    disableOne();
+    enableTwo();
   } else if (userInput === "s") {
+    actionOne = "counter";
+    disableOne();
+    enableTwo();
   } else if (userInput === "d") {
+    actionOne = "defense";
+    disableOne();
+    enableTwo();
   } else if (userInput === "i") {
+    actionTwo = "attack";
+    disableTwo();
+    damageStep(actionOne, actionTwo);
   } else if (userInput === "j") {
+    actionTwo = "strongAttack";
+    disableTwo();
+    damageStep(actionOne, actionTwo);
   } else if (userInput === "k") {
+    actionTwo = "counter";
+    disableTwo();
+    damageStep(actionOne, actionTwo);
+  } else if (userInput === "l") {
+    actionTwo = "defense";
+    disableTwo();
+    damageStep(actionOne, actionTwo);
   }
 };
 
