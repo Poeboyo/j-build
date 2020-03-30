@@ -326,15 +326,45 @@ document.onkeyup = function(event) {
   // On Key Up functions so that two players can share a keyboard instead of a mouse
 
   if (userInput === "w") {
+    //Sets Action One to Attack
     actionOne = "attack";
     disableOne();
     enableTwo();
   } else if (userInput === "a") {
+    //Sets Action One to Strong Attack
+    actionOne = "strongAttack";
+    disableOne();
+    enableTwo();
   } else if (userInput === "s") {
+    //Sets Action One to Counter
+    actionOne = "counter";
+    disableOne();
+    enableTwo();
   } else if (userInput === "d") {
+    //Sets Action One to Defense
+    actionOne = "defense";
+    disableOne();
+    enableTwo();
   } else if (userInput === "i") {
+    //Sets Action Two to Attack
+    actionTwo = "attack";
+    disableTwo();
+    damageStep(actionOne, actionTwo);
   } else if (userInput === "j") {
+    //Sets Action Two to Strong Attack
+    actionTwo = "strongAttack";
+    disableTwo();
+    damageStep(actionOne, actionTwo);
   } else if (userInput === "k") {
+    //Sets Action Two to Counter
+    actionTwo = "counter";
+    disableTwo();
+    damageStep(actionOne, actionTwo);
+  } else if (userInput === "l") {
+    //Sets Action Two to Defense
+    actionTwo = "defense";
+    disableTwo();
+    damageStep(actionOne, actionTwo);
   }
 };
 
