@@ -321,6 +321,23 @@ $("#counterTwo").on("click", function() {
   damageStep(actionOne, actionTwo);
 });
 
+document.onkeyup = function(event) {
+  let userInput = event.key;
+  // On Key Up functions so that two players can share a keyboard instead of a mouse
+
+  if (userInput === "w") {
+    actionOne = "attack";
+    disableOne();
+    enableTwo();
+  } else if (userInput === "a") {
+  } else if (userInput === "s") {
+  } else if (userInput === "d") {
+  } else if (userInput === "i") {
+  } else if (userInput === "j") {
+  } else if (userInput === "k") {
+  }
+};
+
 //Function to Simulate a Heavy attack with a lower chance of success
 function strAttack(playerOne, playerTwo, id) {
   let victimName = playerTwo.name;
