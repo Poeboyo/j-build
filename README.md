@@ -83,6 +83,8 @@ function damageStep(actionOne, actionTwo) {
 
 - The main difficulties that came with this project was making everything work in unison, it was simple to make the functions, although it was quite a few days to figure out HOW I wished for the game to play out and also some objects returning incorrect values that were applied when the damage step was calculated. This project is my main focus for now and just refining it to be a fun experince for nerds who would want to see their favorite characters clash from separate series.
 
+- Another addition to this version of the game is currently in the stages of allowing for scalability to mobile devices but Chrome and Safari are being probelmatic on Mobile Devices.
+
 ## Future Plans
 
 - [ ] Making the Application, Mobile Friendly (Scaling characters for mobile is tedious)
