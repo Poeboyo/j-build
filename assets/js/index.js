@@ -325,27 +325,27 @@ document.onkeyup = function(event) {
   let userInput = event.key;
   // On Key Up functions so that two players can share a keyboard instead of a mouse
 
-  if (userInput === "w") {
+  if (userInput === "a") {
     //Sets Action One to Attack
     actionOne = "attack";
     disableOne();
     enableTwo();
-  } else if (userInput === "a") {
+  } else if (userInput === "s") {
     //Sets Action One to Strong Attack
     actionOne = "strongAttack";
     disableOne();
     enableTwo();
-  } else if (userInput === "s") {
+  } else if (userInput === "d") {
     //Sets Action One to Counter
     actionOne = "counter";
     disableOne();
     enableTwo();
-  } else if (userInput === "d") {
+  } else if (userInput === "f") {
     //Sets Action One to Defense
     actionOne = "defense";
     disableOne();
     enableTwo();
-  } else if (userInput === "i") {
+  } else if (userInput === "h") {
     //Sets Action Two to Attack
     actionTwo = "attack";
     disableTwo();
