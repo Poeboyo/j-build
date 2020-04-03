@@ -5,8 +5,8 @@ body {
 /* Character Select Screen CSS */
 
 #battlepage {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 #characterSelectScreen {
@@ -69,8 +69,8 @@ body {
 /* Battle Area CSS */
 
 #battleArea {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: absolute;
   z-index: 101;
   margin-top: -53%;
@@ -99,7 +99,7 @@ body {
 #playerTwo {
   width: 300px;
   height: 475px;
-  margin-top: 3vh;
+  margin-top: 3%;
 }
 
 /* Player One and Two Buttons  */
