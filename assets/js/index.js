@@ -825,3 +825,5 @@ function knockout() {
   $("#game-end").removeClass("hide");
   disableOne();
 }
+
+disableTwo();
