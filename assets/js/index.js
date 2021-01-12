@@ -313,7 +313,7 @@ $("#counterOne").on("click", function() {
   disableOne();
   enableTwo();
 });
-
+//Hello
 //Applies "Counter" to Player Two's Action
 $("#counterTwo").on("click", function() {
   actionTwo = "counter";
